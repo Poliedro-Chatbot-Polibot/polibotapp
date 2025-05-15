@@ -1,50 +1,114 @@
-# Welcome to your Expo app 👋
+# Polibot – Assistente Virtual para Restaurante 🍕
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este é o repositório do **Polibot**, um aplicativo desenvolvido com [Expo](https://expo.dev) que atua como assistente virtual para um restaurante da escola Poliedro, oferecendo ao cliente uma interface intuitiva para visualizar o cardápio, customizar pizzas e fazer pedidos.
 
-## Get started
+---
 
-1. Install dependencies
+## ✨ Funcionalidades do App
 
-   ```bash
-   npm install
-   ```
+- Exibição de cardápio com categorias (pizzas salgadas, doces, bebidas)
+- Customização de pizza (borda, molho, adicionais como frango/calabresa)
+- Envio de pedidos para o restaurante
+- Interface simples e clara com chat interativo
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## ⚙️ Como rodar o projeto
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+1. Instale as dependências:
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Inicie o aplicativo:
+```bash
+npx expo start
+```
 
-## Learn more
+Você poderá abrir o app via:
 
-To learn more about developing your project with Expo, look at the following resources:
+- [Expo Go](https://expo.dev/go)
+- Emulador Android ou iOS
+- Navegador (modo web)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 📦 Estrutura do Projeto
 
-Join our community of developers creating universal apps.
+```
+polibotapp/
+├── app/                   # Interface do app (telas e navegação)
+│   ├── _layout.tsx
+│   └── index.tsx
+│
+├── src/                   # Lógica da aplicação
+│   ├── services/          # Regras de negócio
+│   │   └── userService.js
+│   └── repositories/      # Simulação de banco (Map)
+│       └── userRepository.js
+│
+├── testes/                # Testes automatizados (Jest)
+│   └── userService.test.js
+│
+├── assets/
+├── package.json
+├── jest.config.js
+└── README.md
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## ✅ Testes Automatizados (TDD)
+
+Implementamos testes com [Jest](https://jestjs.io/) utilizando o ciclo **Red → Green → Refactor** para as seguintes funcionalidades:
+
+### Funcionalidades testadas:
+
+- ✅ Cadastro de usuário com dados válidos
+- ✅ Impedimento de cadastro com e-mail duplicado
+- ✅ Login com credenciais corretas
+- ✅ Login com credenciais inválidas
+- ✅ Validação de campos obrigatórios (nome, e-mail, senha)
+
+### Como executar os testes:
+
+1. Instale as dependências de desenvolvimento:
+```bash
+npm install --save-dev jest ts-jest @types/jest
+```
+
+2. Execute os testes:
+```bash
+npm test
+```
+
+---
+
+## 👨‍💻 Sobre o Projeto Integrador
+
+Este projeto foi desenvolvido como parte da disciplina de **Projeto Integrador do curso de Ciência da Computação**, com o objetivo de aplicar os conceitos de:
+
+- Desenvolvimento ágil
+- Test-Driven Development (TDD)
+- Componentização com React Native
+- Simulação de funcionalidades reais de sistema de pedidos
+
+---
+
+## 📚 Recursos úteis
+
+- [Expo Docs](https://docs.expo.dev/)
+- [Jest Docs](https://jestjs.io/docs/getting-started)
+- [React Native Docs](https://reactnative.dev/)
+
+---
+
+## 👥 Equipe
+
+- Pedro do Couto Rosa Canova
+- Victhor das Virgens de Lima Castro
+- Robert Kevyn Gonçalves Gomes 
+
+---
+
+Pronto para rodar, testar e evoluir. 🚀
